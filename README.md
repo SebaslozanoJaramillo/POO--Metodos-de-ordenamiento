@@ -39,3 +39,51 @@ public class OrdenarInsercion {
 	}
 
 }
+
+Main burbuja
+package Ordenar;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arreglo[] = {10, 4, 3, 9, 2, 23, 5, 4};
+		
+		OrdenamientoBurbuja o = new OrdenamientoBurbuja();
+		o.OrdenamientoBurbuja(arreglo);
+		
+		for(int i = 0; i < arreglo.length; i++) {
+			System.out.println(arreglo[i]);
+		}
+	}
+
+}
+
+ORDENAMIENTO BURBUJA
+package Ordenar;
+
+public class OrdenamientoBurbuja {
+
+	public void OrdenamientoBurbuja(int [] array) {
+		
+		int aux;
+		boolean cambiar = false;
+		
+		while(true) {
+			cambiar = false;
+			
+			for(int i=1; i<array.length; i++) {
+				if(array[i]<array[i-1]) {
+					aux=array[i];
+					array[i]=array[i-1];
+					array[i-1]=aux;
+					cambiar=true;
+				}
+			}
+			
+			if(cambiar==false)
+				break;
+		}
+	}
+
+}
